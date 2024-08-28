@@ -10,15 +10,14 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<title>{title}</title>
+		<meta name="description" content="Welcome to Baked by Blake, Brooksville's favorite kid baker that makes sourdough and sweet treats to die for." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link rel="stylesheet" href="https://use.typekit.net/uby4etz.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
-		
-		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -49,6 +48,7 @@ const { title } = Astro.props;
 		--black: #050505;
 		--brown: #542511;
 	}
+	
 	html {
 		font-family: "rift-soft", sans-serif;
 		font-weight: 400;
