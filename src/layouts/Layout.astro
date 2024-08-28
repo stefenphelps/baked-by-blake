@@ -12,8 +12,12 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="stylesheet" href="https://use.typekit.net/uby4etz.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+		
 		<title>{title}</title>
 	</head>
 	<body>
@@ -21,30 +25,83 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	/* @link https://utopia.fyi/type/calculator?c=400,18,1.2,1000,20,1.333,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		/* Step 0: 18px → 20px */
+		--font-size-0: clamp(1.125rem, 1.0417rem + 0.3333vw, 1.25rem);
+		/* Step 1: 21.6px → 26.66px */
+		--font-size-1: clamp(1.35rem, 1.1392rem + 0.8433vw, 1.6663rem);
+		/* Step 2: 25.92px → 35.5378px */
+		--font-size-2: clamp(1.62rem, 1.2193rem + 1.603vw, 2.2211rem);
+		/* Step 3: 31.104px → 47.3719px */
+		--font-size-3: clamp(1.944rem, 1.2662rem + 2.7113vw, 2.9607rem);
+		/* Step 4: 37.3248px → 63.1467px */
+		--font-size-4: clamp(2.3328rem, 1.2569rem + 4.3036vw, 3.9467rem);
+		/* Step 5: 44.7898px → 84.1745px */
+		--font-size-5: clamp(2.7994rem, 1.1583rem + 6.5641vw, 5.2609rem);
+	}
+
+	:root {
+		--tan: #FCF0E4;
+		--blue: #2459A2;
+		--dark-blue: #112354;
+		--light-blue: #91B3CC;
+		--black: #050505;
+		--brown: #542511;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: "rift-soft", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		background: var(--tan);
+		font-size: var(--font-size-0);
+		line-height: 1.625;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	.flipdown.flipdown__theme-dark .rotor-group-heading:before {
+		font-family: "rift-soft", sans-serif;
+	}
+	h1,h2,h3,h4,h5 {
+		margin: 2rem 0 1rem;
+	}
+	h1 {
+		font-size: var(--font-size-5);
+		line-height: 1.1;
+	}
+	h2 {
+		font-size: var(--font-size-4);
+		line-height: 1.2;
+	}
+	h3 {
+		font-size: var(--font-size-3);
+		line-height: 1.4;
+		margin-top: 0;
+	}
+	h4 {
+		font-size: var(--font-size-2);
+		line-height: 1.6;
+	}
+	h5 {
+		font-size: var(--font-size-1);
+		line-height: 1.8;
+	}
+	
+	a {
+		color: var(--blue);
+	}
+	a:hover {
+		color: var(--dark-blue);
+	}
+	
+	.tagline {
+		font-family: "Reenie Beanie", cursive;
+		font-weight: 400;
+		font-style: normal;
+		font-size: var(--font-size-2);
+		margin: 0;
+		line-height: 1.2;
+	}
+
+	img {
+		border-radius: 8px;
 	}
 </style>
