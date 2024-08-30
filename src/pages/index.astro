@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Subscribe from '../components/Subscribe.astro';
 import { Image } from 'astro:assets';
 
 import "flipdown/dist/flipdown.css";
@@ -39,6 +40,11 @@ import footerImage from "../images/blake.png";
 		<h2>Make an Order</h2>
 		<p>Send money along with a note about what you want via either option below:</p>
 		<p><strong>Cash App:</strong> <a href="https://cash.app/$KaraPhelps">@karaphelps</a> &nbsp; &nbsp; <strong>Venmo:</strong> <a href="https://venmo.com/u/Kara-Phelps-13">@kara-phelps-13</a></p>
+		<h2>Subscribe</h2>
+		<p>Not ready to make an order this time or just don't want to miss out for next time? Subscribe below!</p>
+		
+		<Subscribe />
+		
 		<Image src={footerImage} alt="Baked by Blake illustration." width="610" densities={[1, 1.5, 2]} />
 	</main>
 </Layout>
