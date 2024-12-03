@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.12",
+    "astro": "^5.0.1",
     "flipdown": "^0.3.2",
     "sanitize.css": "^13.0.0"
   }
